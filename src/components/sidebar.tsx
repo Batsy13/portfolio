@@ -8,13 +8,17 @@ import {
   UserCircle,
 } from "lucide-react";
 import { AnimatedShinyText } from "./magicui/animated-shiny-text";
+import { Link, useLocation } from "react-router";
+import { cn } from "@/lib/utils";
 
 export const Sidebar = () => {
+  const { pathname } = useLocation();
+
   const menuItems = [
-    { title: "Explore", icon: Compass },
-    { title: "Projects", icon: Atom },
-    { title: "Stack", icon: Database },
-    { title: "About", icon: UserCircle },
+    { title: "Explore", icon: Compass, path: "/" },
+    { title: "Projects", icon: Atom, path: "/projects" },
+    { title: "Stack", icon: Database, path: "/stack" },
+    { title: "About", icon: UserCircle, path: "/about" },
   ];
 
   const contactItems = [
@@ -41,32 +45,37 @@ export const Sidebar = () => {
       </div>
 
       <nav className="flex flex-col gap-2">
-        {menuItems.map((item) => {
+        {menuItems.map((item, index) => {
           const Icon = item.icon;
           return (
-            <div className="text-[#cecece] p-4 cursor-pointer flex gap-2 items-center hover:text-[#FFF] rounded-xl hover:bg-[#161616]">
+            <Link
+              to={item.path}
+              key={index}
+              className={cn("text-[#cecece] p-4 cursor-pointer flex gap-2 items-center hover:text-[#FFF] rounded-xl hover:bg-[#161616]", pathname === item.path ? "bg-[#161616] text-[#FFF] brightness-200" : "")}
+            >
               {Icon && <Icon className="size-5 flex-none" />}
               <p>{item.title}</p>
-            </div>
+            </Link>
           );
         })}
       </nav>
       <div className="flex flex-col gap-2 mt-2">
         <AnimatedShinyText className="py-2 px-1">Contact me</AnimatedShinyText>
         <nav className="flex flex-col gap-2">
-          {contactItems.map((item) => {
+          {contactItems.map((item, index) => {
             const Icon = item.icon;
             return (
               <a
                 className="text-[#cecece] p-4 cursor-pointer flex gap-2 items-center justify-between hover:text-[#FFF] rounded-xl hover:bg-[#161616]"
                 href={item.link}
                 target="_blank"
+                key={index}
               >
                 <div className="flex gap-2 items-center ">
                   {Icon && <Icon className="size-5 flex-none" />}
                   <p>{item.title}</p>
                 </div>
-                <ExternalLink size={18}/>
+                <ExternalLink size={18} />
               </a>
             );
           })}
