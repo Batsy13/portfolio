@@ -3,13 +3,13 @@ import {
   Compass,
   Database,
   ExternalLink,
-  Github,
-  Linkedin,
   UserCircle,
 } from "lucide-react";
 import { AnimatedShinyText } from "./magicui/animated-shiny-text";
 import { Link, useLocation } from "react-router";
 import { cn } from "@/lib/utils";
+import Github from "@/assets/aside/github.svg"
+import Linkedin from "@/assets/aside/linkedin.svg"
 
 export const Sidebar = () => {
   const { pathname } = useLocation();
@@ -47,6 +47,7 @@ export const Sidebar = () => {
       <nav className="flex flex-col gap-2">
         {menuItems.map((item, index) => {
           const Icon = item.icon;
+          console.log(item)
           return (
             <Link
               to={item.path}
@@ -72,7 +73,7 @@ export const Sidebar = () => {
                 key={index}
               >
                 <div className="flex gap-2 items-center ">
-                  {Icon && <Icon className="size-5 flex-none" />}
+                  {Icon && <img src={`${Icon}`} alt="Icon" className="linkedin-icon size-6 flex-none"></img>}
                   <p>{item.title}</p>
                 </div>
                 <ExternalLink size={18} />

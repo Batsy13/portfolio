@@ -1,13 +1,13 @@
 import { Outlet } from "react-router";
 import { Sidebar } from "./components/sidebar";
 
-function App() {
+function Layout() {
   return (
     <div className="h-[100dvh] flex">
       <Sidebar />
-      <Outlet  />
+      <Outlet />
     </div>
   );
 }
 
-export default App;
+export default Layout;
