@@ -5,7 +5,7 @@ import { TechnologiesButton } from "../src/components/ui/technologies-button";
 
 export const Home = () => {
   return (
-    <main className="h-screen w-full bg-black px-[40px] py-[86px] flex flex-col items-center justify-start overflow-scroll">
+    <main className="h-screen w-full bg-[#050505] px-[40px] py-[86px] flex flex-col items-center justify-start overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
         <div className="flex flex-col gap-4 py-4 text-[rgb(255,255,255)] w-full">
           <motion.h2
@@ -23,7 +23,7 @@ export const Home = () => {
           <motion.p
             className="text-[#c3c3c3]"
             initial={{ x: -20, y: 0, opacity: 0 }}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 1, delay: 0.5  }}
             animate={{ x: 0, y: 0, opacity: 1 }}
           >
             I am a front-end web developer dedicated to building visually
@@ -34,7 +34,7 @@ export const Home = () => {
           <motion.div
             className="flex gap-3"
             initial={{ x: 0, y: 10, opacity: 0 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1, delay: 1 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
           >
             <TechnologiesButton>React</TechnologiesButton>
@@ -46,16 +46,16 @@ export const Home = () => {
           <motion.h2
             className="text-[#FFF] text-[24px] font-bold"
             initial={{ opacity: 0 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1, delay: 1.8 }}
             animate={{ opacity: 1 }}
           >
             Newest
           </motion.h2>
-          <motion.div className="grid grid-cols-2 gap-[24px]">
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
             <motion.div
-              initial={{ y: -20, opacity: 0 }}
-              transition={{ duration: 2 }}
-              animate={{ y: 0, opacity: 1 }}
+              initial={{ opacity: 0 }}
+              transition={{ duration: 1, delay: 1.8 }}
+              animate={{ opacity: 1 }}
             >
               <Card
                 title="Hollow Knight"
@@ -64,9 +64,9 @@ export const Home = () => {
               />
             </motion.div>
             <motion.div
-              initial={{ y: -20, opacity: 0 }}
-              transition={{ duration: 2 }}
-              animate={{ y: 0, opacity: 1 }}
+              initial={{ opacity: 0 }}
+              transition={{ duration: 1, delay: 1.8 }}
+              animate={{ opacity: 1 }}
             >
               <Card
                 title="Bat-lib"

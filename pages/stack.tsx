@@ -3,7 +3,7 @@ import { TechnologiesCard } from "@/components/ui/technologies-card";
 
 export const Stack = () => {
   return (
-    <section className="h-screen w-full bg-black px-[40px] py-[86px] flex flex-col items-center justify-start overflow-scroll">
+    <section className="h-screen w-full bg-[#050505] px-[40px] py-[86px] flex flex-col items-center justify-start overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
         <h2 className="text-[#FFF] text-[32px] font-bold">Technologies</h2>
 

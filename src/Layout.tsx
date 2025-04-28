@@ -3,7 +3,7 @@ import { Sidebar } from "./components/sidebar";
 
 function Layout() {
   return (
-    <div className="h-[100dvh] flex">
+    <div className="h-[100dvh] flex montserrat">
       <Sidebar />
       <Outlet />
     </div>

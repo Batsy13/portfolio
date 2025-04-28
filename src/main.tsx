@@ -6,6 +6,7 @@ import { Home } from "../pages/home.tsx";
 import { Projects } from "../pages/projects.tsx"
 import { Stack } from "../pages/stack.tsx"
 import { About } from "../pages/about.tsx"
+import { Contact } from "../pages/contact.tsx"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="projects" element={<Projects />}></Route>
         <Route path="stack" element={<Stack />}></Route>
         <Route path="about" element={<About />}></Route>
+        <Route path="contact" element={<Contact />}></Route>
       </Route>
     </Routes>
   </BrowserRouter>
