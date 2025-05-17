@@ -2,20 +2,20 @@ import { motion } from "motion/react";
 
 export const About = () => {
   return (
-    <section className="h-screen w-full bg-[#050505] px-10 py-20 flex flex-col items-center justify-center overflow-y-auto">
-      <div className="flex flex-col items-center justify-center text-center gap-6 max-w-[1000px] w-full text-[#e0e0e0]">
+    <section className="h-screen w-full bg-[#050505] px-6 py-10 flex flex-col items-center justify-start overflow-y-auto md:px-10 md:py-20 md:justify-center">
+      <div className="flex flex-col items-center text-center gap-6 max-w-[1000px] w-full text-[#e0e0e0]">
         <motion.img
           src="/jokerpersona.png"
           alt="Profile"
-          className="size-40 border-[5px] border-[#222222] rounded-full"
+          className="size-32 md:size-40 border-[5px] border-[#222222] rounded-full"
           initial={{ opacity: 0 }}
           transition={{ duration: 1 }}
           animate={{ opacity: 1 }}
         />
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 md:gap-6">
           <motion.h2
-            className="font-bold text-[24px]"
+            className="font-bold text-[20px] md:text-[24px]"
             initial={{ y: -10, opacity: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
             animate={{ y: 0, opacity: 1 }}
@@ -24,7 +24,7 @@ export const About = () => {
           </motion.h2>
 
           <motion.div
-            className="text-justify"
+            className="text-justify text-sm md:text-base"
             initial={{ x: -10, opacity: 0 }}
             transition={{ duration: 1, delay: 1 }}
             animate={{ x: 0, opacity: 1 }}
@@ -47,10 +47,10 @@ export const About = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2">
-          <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 mt-6 md:gap-6 md:grid md:grid-cols-2">
+          <div className="flex flex-col gap-4">
             <motion.h3
-              className="font-bold text-[24px]"
+              className="font-bold text-[20px] md:text-[24px]"
               initial={{ y: -10, opacity: 0 }}
               transition={{ duration: 1, delay: 1.5 }}
               animate={{ y: 0, opacity: 1 }}
@@ -58,7 +58,7 @@ export const About = () => {
               My Career So far
             </motion.h3>
             <motion.span
-              className="text-justify"
+              className="text-justify text-sm md:text-base"
               initial={{ y: -10, opacity: 0 }}
               transition={{ duration: 1, delay: 1.8 }}
               animate={{ y: 0, opacity: 1 }}

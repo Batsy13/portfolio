@@ -2,12 +2,13 @@ type CardProps = {
   title: string;
   description: string;
   badges: string[];
+  image?: string;
 };
 
-export const Card = ({ title, description, badges }: CardProps) => {
+export const Card = ({ title, description, badges, image }: CardProps) => {
   return (
     <div className="h-full w-full rounded-xl">
-      <div className="bg-[#848484] h-[250px] rounded-t-xl"></div>
+      <div className="bg-[#848484] h-[250px] rounded-t-xl overflow-hidden"><img src={image} alt="Card Image" className="h-full w-full"/></div>
       <div className="w-full flex flex-col bg-[#0A0A0A] rounded-b-xl py-4 px-5 gap-[10px]">
         <h3 className="text-2xl text-[#FFF] font-bold">{title}</h3>
         <span className="text-[#ECECEC]">{description}</span>

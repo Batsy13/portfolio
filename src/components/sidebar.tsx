@@ -12,37 +12,52 @@ import { AnimatedShinyText } from "./magicui/animated-shiny-text";
 import { cn } from "@/lib/utils";
 import Github from "@/assets/aside/github.svg";
 import Linkedin from "@/assets/aside/linkedin.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
+
+const menuItems = [
+  { title: "Explore", icon: Compass, path: "/" },
+  { title: "Projects", icon: Atom, path: "/projects" },
+  { title: "Stack", icon: Database, path: "/stack" },
+  { title: "About", icon: UserCircle, path: "/about" },
+];
+
+const contactItems = [
+  {
+    title: "Email",
+    icon: Mail,
+    path: "/contact",
+  },
+  {
+    title: "Github",
+    icon: Github,
+    link: "https://github.com/Batsy13",
+  },
+  {
+    title: "Linkedin",
+    icon: Linkedin,
+    link: "https://www.linkedin.com/in/pedro-costa-b189262b3/",
+  },
+];
 
 export const Sidebar = () => {
   const [isCollapse, setCollapse] = useState(false);
   const { pathname } = useLocation();
 
-  const menuItems = [
-    { title: "Explore", icon: Compass, path: "/" },
-    { title: "Projects", icon: Atom, path: "/projects" },
-    { title: "Stack", icon: Database, path: "/stack" },
-    { title: "About", icon: UserCircle, path: "/about" },
-  ];
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setCollapse(true);
+      }
+    };
 
-  const contactItems = [
-    {
-      title: "Email",
-      icon: Mail,
-      path: "/contact",
-    },
-    {
-      title: "Github",
-      icon: Github,
-      link: "https://github.com/Batsy13",
-    },
-    {
-      title: "Linkedin",
-      icon: Linkedin,
-      link: "https://www.linkedin.com/in/pedro-costa-b189262b3/",
-    },
-  ];
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <aside
@@ -155,7 +170,7 @@ export const Sidebar = () => {
       </div>
 
       <button
-        className="absolute -right-[1rem] top-[1.2rem] bg-[#000000] border-[1px] border-[#1f1f1f] rounded-full size-8 grid place-items-center cursor pointer transition-all duration-200 ease-in-out"
+        className="absolute hidden  -right-[1rem] top-[1.2rem] bg-[#000000] border-[1px] border-[#1f1f1f] rounded-full size-8 md:grid place-items-center cursor pointer transition-all duration-200 ease-in-out"
         onClick={() => setCollapse(!isCollapse)}
       >
         {isCollapse ? (

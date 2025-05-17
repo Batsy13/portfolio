@@ -51,13 +51,14 @@ export const Home = () => {
           >
             Newest
           </motion.h2>
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
+          <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-[24px]">
             <motion.div
               initial={{ opacity: 0 }}
               transition={{ duration: 1, delay: 1.8 }}
               animate={{ opacity: 1 }}
             >
               <Card
+                image="/hollow hero.png"
                 title="Hollow Knight"
                 description="lorem ipsum dolor it amet"
                 badges={["React", "Node", "NextJs"]}

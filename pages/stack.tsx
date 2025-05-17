@@ -1,17 +1,30 @@
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import { TechnologiesCard } from "@/components/ui/technologies-card";
+import { motion } from "motion/react";
 
 export const Stack = () => {
   return (
     <section className="h-screen w-full bg-[#050505] px-[40px] py-[86px] flex flex-col items-center justify-start overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
-        <h2 className="text-[#FFF] text-[32px] font-bold">Technologies</h2>
+        <motion.h2
+          className="text-[#FFF] text-[32px] font-bold"
+          initial={{ y: -20, opacity: 0 }}
+          transition={{ duration: 1 }}
+          animate={{ y: 0, opacity: 1 }}
+        >
+          Technologies
+        </motion.h2>
 
-        <div className="flex flex-col gap-4">
+        <motion.div
+          className="flex flex-col gap-4"
+          initial={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+          animate={{ opacity: 1 }}
+        >
           <AnimatedShinyText className="text-[24px] font-bold">
             Frontend Development
           </AnimatedShinyText>
-          <div className="grid grid-cols-2 grid-rows-2 gap-4">
+          <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-2 gap-4">
             <TechnologiesCard
               icon="/src/assets/stack/react.svg"
               title="React"
@@ -33,13 +46,18 @@ export const Stack = () => {
               description="A utility-first CSS framework that provides low-level utility classes. This allows for rapid and highly customized UI development."
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-4">
+        <motion.div
+          className="flex flex-col gap-4"
+          initial={{ opacity: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          animate={{ opacity: 1 }}
+        >
           <AnimatedShinyText className="text-[24px] font-bold">
             Backend Development
           </AnimatedShinyText>
-          <div className="grid grid-cols-2 grid-rows-2 gap-4">
+          <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-2 gap-4">
             <TechnologiesCard
               icon="/src/assets/stack/nodejs.svg"
               title="Node"
@@ -61,20 +79,25 @@ export const Stack = () => {
               description="A high-level Python web framework that facilitates rapid development of robust and feature-rich web applications."
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-4">
+        <motion.div
+          className="flex flex-col gap-4"
+          initial={{ opacity: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+          animate={{ opacity: 1 }}
+        >
           <AnimatedShinyText className="text-[24px] font-bold">
             Complementary Tools
           </AnimatedShinyText>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <TechnologiesCard
               icon="/src/assets/stack/figma.svg"
               title="Figma"
               description="A collaborative, web-based design tool for creating user interfaces and interactive prototypes. It facilitates real-time teamwork and streamlines the design process for digital products."
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
