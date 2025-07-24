@@ -21,6 +21,7 @@ export const Projects = () => {
             animate={{ x: 0, y: 0, opacity: 1 }}
           >
             <Card
+              image="/hollow hero.png"
               title="Hollow Knight"
               description="lorem ipsum dolor it amet"
               badges={["React", "Node", "NextJs"]}

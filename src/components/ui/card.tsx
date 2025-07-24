@@ -22,7 +22,7 @@ export const Card = ({ title, description, badges, image }: CardProps) => {
 
   return (
     <div
-      className="relative flex flex-col w-full h-full overflow-hidden rounded-xl group"
+      className="relative flex flex-col w-full h-full overflow-hidden rounded-xl group hover:-translate-y-0.5 ease-in-out duration-500"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
