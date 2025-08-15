@@ -42,7 +42,7 @@ export const Home = () => {
             <TechnologiesButton>NextJS</TechnologiesButton>
           </motion.div>
         </div>
-        <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-col w-full gap-4">
           <motion.h2
             className="text-[#FFF] text-[24px] font-bold"
             initial={{ opacity: 0 }}

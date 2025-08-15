@@ -67,7 +67,7 @@ export const Contact = () => {
               }`}
             />
             {errors.subject && (
-              <p className="text-red-500 text-xs italic">
+              <p className="text-xs italic text-red-500">
                 {errors.subject.message}
               </p>
             )}
@@ -90,7 +90,7 @@ export const Contact = () => {
               }`}
             />
             {errors.email && (
-              <p className="text-red-500 text-xs italic">
+              <p className="text-xs italic text-red-500">
                 {errors.email?.message}
               </p>
             )}
@@ -113,7 +113,7 @@ export const Contact = () => {
               }`}
             />
             {errors.message && (
-              <p className="text-red-500 text-xs italic">
+              <p className="text-xs italic text-red-500">
                 {errors.message?.message}
               </p>
             )}

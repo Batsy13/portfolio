@@ -3,9 +3,9 @@ import { Card } from "../src/components/ui/card";
 
 export const Projects = () => {
   return (
-    <section className="h-screen w-full bg-[#050505] px-[40px] py-[86px] flex flex-col items-center justify-start overflow-y-auto">
+    <section className="h-screen w-full bg-[#050505] px-[40px] py-[100px] flex flex-col items-center justify-start overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
-        <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-col w-full gap-4">
           <motion.h2
             className="text-[#FFF] text-[24px] font-bold"
             initial={{ x: 0, y: -20, opacity: 0 }}

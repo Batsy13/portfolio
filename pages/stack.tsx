@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export const Stack = () => {
   return (
-    <section className="h-screen w-full bg-[#050505] px-[40px] py-[86px] flex flex-col items-center justify-start overflow-y-auto">
+    <section className="h-screen w-full bg-[#050505] px-[40px] py-[100px] flex flex-col items-center justify-start overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
         <motion.h2
           className="text-[#FFF] text-[32px] font-bold"
@@ -24,7 +24,7 @@ export const Stack = () => {
           <AnimatedShinyText className="text-[24px] font-bold">
             Frontend Development
           </AnimatedShinyText>
-          <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-2 gap-4">
+          <div className="grid grid-cols-1 grid-rows-1 gap-4 lg:grid-cols-2 lg:grid-rows-2">
             <TechnologiesCard
               icon="/src/assets/stack/react.svg"
               title="React"
@@ -57,7 +57,7 @@ export const Stack = () => {
           <AnimatedShinyText className="text-[24px] font-bold">
             Backend Development
           </AnimatedShinyText>
-          <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-2 gap-4">
+          <div className="grid grid-cols-1 grid-rows-1 gap-4 lg:grid-cols-2 lg:grid-rows-2">
             <TechnologiesCard
               icon="/src/assets/stack/nodejs.svg"
               title="Node"
@@ -90,7 +90,7 @@ export const Stack = () => {
           <AnimatedShinyText className="text-[24px] font-bold">
             Complementary Tools
           </AnimatedShinyText>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             <TechnologiesCard
               icon="/src/assets/stack/figma.svg"
               title="Figma"

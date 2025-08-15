@@ -6,6 +6,7 @@ import {
   Database,
   ExternalLink,
   Mail,
+  Terminal,
   UserCircle,
 } from "lucide-react";
 import { AnimatedShinyText } from "./magicui/animated-shiny-text";
@@ -20,6 +21,7 @@ const menuItems = [
   { title: "Projects", icon: Atom, path: "/projects" },
   { title: "Stack", icon: Database, path: "/stack" },
   { title: "About", icon: UserCircle, path: "/about" },
+  { title: "Achievements", icon: Terminal, path: "/achievements"}
 ];
 
 const contactItems = [

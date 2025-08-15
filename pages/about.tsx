@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export const About = () => {
   return (
-    <section className="h-screen w-full bg-[#050505] px-6 py-10 flex flex-col items-center justify-start overflow-y-auto md:px-10 md:py-20 md:justify-center">
+    <section className="h-screen w-full bg-[#050505] px-6 py-10 flex flex-col items-center justify-start overflow-y-auto md:px-10 md:py-[100px] md:justify-center">
       <div className="flex flex-col items-center text-center gap-6 max-w-[1000px] w-full text-[#e0e0e0]">
         <motion.img
           src="/jokerpersona.png"
@@ -24,7 +24,7 @@ export const About = () => {
           </motion.h2>
 
           <motion.div
-            className="text-justify text-sm md:text-base"
+            className="text-sm text-justify md:text-base"
             initial={{ x: -10, opacity: 0 }}
             transition={{ duration: 1, delay: 1 }}
             animate={{ x: 0, opacity: 1 }}
@@ -58,7 +58,7 @@ export const About = () => {
               My Career So far
             </motion.h3>
             <motion.span
-              className="text-justify text-sm md:text-base"
+              className="text-sm text-justify md:text-base"
               initial={{ y: -10, opacity: 0 }}
               transition={{ duration: 1, delay: 1.8 }}
               animate={{ y: 0, opacity: 1 }}
