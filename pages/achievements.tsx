@@ -11,7 +11,7 @@ export const AchievementsPage = () => {
             <h2>Licenses & Certifications</h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             <AchievementCard
               image="../src/assets/certificates/react certificate.png"
               imageLink="https://www.hackerrank.com/certificates/cd01038aca6e"
@@ -35,6 +35,14 @@ export const AchievementsPage = () => {
               subtitle="HackerRank"
               date="Issued Aug. 2025"
               icon="/hacker rank icon.png"
+            />
+            <AchievementCard
+              image="../src/assets/certificates/data-structure.png"
+              imageLink="https://www.hackerrank.com/certificates/2f69425822b8"
+              title="Data Structure"
+              subtitle="Augusto Galego ( Hubla )"
+              date="Issued July 2025"
+              icon="/hubla icon.jpeg"
             />
           </div>
         </div>

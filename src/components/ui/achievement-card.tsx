@@ -29,12 +29,11 @@ export const AchievementCard = ({
       >
         <img
           src={image}
-          className="rounded-[14px] object-cover w-full h-full transition-opacity duration-300"
-          style={{ opacity: isHovered ? 0.7 : 1 }}
+          className="rounded-[14px] object-cover w-full h-full transition-opacity duration-300 aspect-[16/12]"
           alt={title}
         />
         {isHovered && (
-          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-b from-gray-600/10 to-black/70 rounded-[14px] transition-opacity duration-1000 opacity-100">
+          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-b from-gray-600/10 to-black/70 rounded-[14px] transition-opacity duration-1000 ease-in-out opacity-100">
             <div className="flex justify-start p-4">
               <a
                 href={imageLink}
