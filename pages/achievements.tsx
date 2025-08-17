@@ -38,7 +38,7 @@ export const AchievementsPage = () => {
             />
             <AchievementCard
               image="../src/assets/certificates/data-structure.png"
-              imageLink="https://www.hackerrank.com/certificates/2f69425822b8"
+              imageLink=""
               title="Data Structure"
               subtitle="Augusto Galego ( Hubla )"
               date="Issued July 2025"
