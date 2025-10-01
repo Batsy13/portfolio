@@ -177,11 +177,11 @@ export const Sidebar = () => {
       >
         {isCollapse ? (
           <ChevronRight
-            className="h-4 w-4 transition-transform duration-200 ease-in-out text-[#454545] hover:text-[#FFF] cursor-pointer"
+            className="h-4 w-4 transition-transform duration-200 ease-in-out text-white hover:text-[#FFF] cursor-pointer"
           />
         ) : (
           <ChevronLeft
-            className="h-4 w-4 transition-transform duration-200 ease-in-out text-[#454545] hover:text-[#FFF] cursor-pointer"
+            className="h-4 w-4 transition-transform duration-200 ease-in-out text-white hover:text-[#FFF] cursor-pointer"
           />
         )}
       </button>

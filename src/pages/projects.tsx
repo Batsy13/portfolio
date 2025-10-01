@@ -1,5 +1,5 @@
+import { Card } from "@/components/ui/card";
 import { motion } from "motion/react";
-import { Card } from "../src/components/ui/card";
 
 export const Projects = () => {
   return (
@@ -21,25 +21,29 @@ export const Projects = () => {
             animate={{ x: 0, y: 0, opacity: 1 }}
           >
             <Card
+              image="/umbra-preview.png"
+              title="Umbra"
+              description="An application that shows you your network traffic"
+              badges={["React", "NodeJs"]}
+              link="https://github.com/lucascosta224fe/Umbra-Front-End"
+            />
+            <Card
               image="/hollow hero.png"
               title="Hollow Knight"
-              description="lorem ipsum dolor it amet"
-              badges={["React", "Node", "NextJs"]}
+              description="A Hollow Knight Wiki"
+              badges={["React", "NextJs", "Node"]}
+              link="https://github.com/Batsy13/hollow-knight"
             />
             <Card
               title="Bat-lib"
-              description="lorem ipsum dolor it amet"
-              badges={["React", "Python"]}
+              description="A component library for react"
+              badges={["React"]}
+              link="https://github.com/Batsy13/bat-ui"
             />
             <Card
               title="Notes"
               description="lorem ipsum dolor it amet"
               badges={["React", "Node", "NextJs"]}
-            />
-            <Card
-              title="XXXXXXXX"
-              description="lorem ipsum dolor it amet"
-              badges={["React", "Python"]}
             />
           </motion.div>
         </div>

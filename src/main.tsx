@@ -2,12 +2,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import Layout from "./Layout.tsx";
 import { BrowserRouter, Routes, Route } from "react-router";
-import { Home } from "../pages/home.tsx";
-import { Projects } from "../pages/projects.tsx"
-import { Stack } from "../pages/stack.tsx"
-import { About } from "../pages/about.tsx"
-import { Contact } from "../pages/contact.tsx"
-import { AchievementsPage } from "../pages/achievements.tsx"
+import { Stack } from "./pages/stack.tsx"
+import { About } from "./pages/about.tsx"
+import { Contact } from "./pages/contact.tsx"
+import { AchievementsPage } from "./pages/achievements.tsx"
+import { Projects } from "./pages/projects.tsx";
+import { Home } from "./pages/home.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>

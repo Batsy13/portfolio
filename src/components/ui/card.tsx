@@ -1,13 +1,15 @@
 import { useState, MouseEvent } from 'react';
+import { Link } from 'react-router';
 
 type CardProps = {
   title: string;
   description: string;
   badges: string[];
   image?: string;
+  link?: string;
 };
 
-export const Card = ({ title, description, badges, image }: CardProps) => {
+export const Card = ({ title, description, badges, image, link }: CardProps) => {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -44,9 +46,9 @@ export const Card = ({ title, description, badges, image }: CardProps) => {
         />
       )}
 
-      <div className="bg-[#848484] rounded-t-xl overflow-hidden aspect-video">
+      <Link to={link || ""} className="bg-[#848484] rounded-t-xl overflow-hidden aspect-video" target='_blank'>
         <img src={image} alt="Card Image" className="object-cover w-full h-full" />
-      </div>
+      </Link>
       <div className="w-full flex flex-col bg-[#0A0A0A] rounded-b-xl py-4 px-5 gap-[10px]">
         <h3 className="text-2xl text-[#FFF] font-bold">{title}</h3>
         <span className="text-[#ECECEC]">{description}</span>

@@ -1,7 +1,7 @@
+import { AuroraText } from "@/components/magicui/aurora-text";
+import { Card } from "@/components/ui/card";
+import { TechnologiesButton } from "@/components/ui/technologies-button";
 import { motion } from "motion/react";
-import { AuroraText } from "../src/components/magicui/aurora-text";
-import { Card } from "../src/components/ui/card";
-import { TechnologiesButton } from "../src/components/ui/technologies-button";
 
 export const Home = () => {
   return (
@@ -23,7 +23,7 @@ export const Home = () => {
           <motion.p
             className="text-[#c3c3c3]"
             initial={{ x: -20, y: 0, opacity: 0 }}
-            transition={{ duration: 1, delay: 0.5  }}
+            transition={{ duration: 1, delay: 0.5 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
           >
             I am a front-end web developer dedicated to building visually
@@ -58,10 +58,11 @@ export const Home = () => {
               animate={{ opacity: 1 }}
             >
               <Card
-                image="/hollow hero.png"
-                title="Hollow Knight"
-                description="lorem ipsum dolor it amet"
-                badges={["React", "Node", "NextJs"]}
+                image="/umbra-preview.png"
+                title="Umbra"
+                description="An application that shows you your network traffic"
+                badges={["React", "NodeJs"]}
+                link="https://github.com/lucascosta224fe/Umbra-Front-End"
               />
             </motion.div>
             <motion.div
@@ -70,9 +71,11 @@ export const Home = () => {
               animate={{ opacity: 1 }}
             >
               <Card
-                title="Bat-lib"
-                description="lorem ipsum dolor it amet"
-                badges={["React", "Python"]}
+                image="/hollow hero.png"
+                title="Hollow Knight"
+                description="A Hollow Knight Wiki"
+                badges={["React", "NextJs", "Node"]}
+                link="https://github.com/Batsy13/hollow-knight"
               />
             </motion.div>
           </motion.div>
