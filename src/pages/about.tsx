@@ -5,9 +5,9 @@ export const About = () => {
     <section className="h-screen w-full bg-[#050505] px-6 py-10 flex flex-col items-center justify-start overflow-y-auto md:px-10 md:py-[100px] md:justify-center">
       <div className="flex flex-col items-center text-center gap-6 max-w-[1000px] w-full text-[#e0e0e0]">
         <motion.img
-          src="/jokerpersona.png"
+          src="/me.jpg"
           alt="Profile"
-          className="size-32 md:size-40 border-[5px] border-[#222222] rounded-full"
+          className="size-32 md:size-40 border-[5px] border-[#222222] rounded-full object-cover"
           initial={{ opacity: 0 }}
           transition={{ duration: 1 }}
           animate={{ opacity: 1 }}

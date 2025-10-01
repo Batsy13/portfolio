@@ -73,9 +73,9 @@ export const Sidebar = () => {
         }`}
       >
         <img
-          src="/jokerpersona.png"
+          src="/me.jpg"
           alt="Icon"
-          className="size-[44px] shrink rounded-full"
+          className="size-[44px] shrink rounded-full object-cover"
         />
         <div className={cn(isCollapse ? "hidden" : "")}>
           <p className="font-bold text-[#FFF] text-[20px]">Pedro Costa</p>
