@@ -33,12 +33,14 @@ export const Projects = () => {
               description="A Hollow Knight Wiki"
               badges={["React", "NextJs", "Node"]}
               link="https://github.com/Batsy13/hollow-knight"
+              githubLink="https://github.com/Batsy13/hollow-knight"
             />
             <Card
               title="Bat-lib"
               description="A component library for react"
               badges={["React"]}
               link="https://github.com/Batsy13/bat-ui"
+              githubLink="https://github.com/Batsy13/bat-ui"
             />
             <Card
               title="Notes"

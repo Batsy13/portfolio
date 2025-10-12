@@ -1,5 +1,6 @@
-import { useState, MouseEvent } from 'react';
-import { Link } from 'react-router';
+import { useState, MouseEvent } from "react";
+import { Link } from "react-router";
+import { GithubIcon } from "../icon/github";
 
 type CardProps = {
   title: string;
@@ -7,9 +8,17 @@ type CardProps = {
   badges: string[];
   image?: string;
   link?: string;
+  githubLink?: string;
 };
 
-export const Card = ({ title, description, badges, image, link }: CardProps) => {
+export const Card = ({
+  title,
+  description,
+  badges,
+  image,
+  link,
+  githubLink,
+}: CardProps) => {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -39,18 +48,31 @@ export const Card = ({ title, description, badges, image, link }: CardProps) => 
               linear-gradient(#fff 0 0) content-box,
               linear-gradient(#fff 0 0)
             `,
-            WebkitMaskComposite: 'xor',
-            maskComposite: 'exclude',
-            padding: '2px',
+            WebkitMaskComposite: "xor",
+            maskComposite: "exclude",
+            padding: "2px",
           }}
         />
       )}
 
-      <Link to={link || ""} className="bg-[#848484] rounded-t-xl overflow-hidden aspect-video" target='_blank'>
-        <img src={image} alt="Card Image" className="object-cover w-full h-full" />
+      <Link
+        to={link || ""}
+        className="bg-[#848484] rounded-t-xl overflow-hidden aspect-video"
+        target="_blank"
+      >
+        <img
+          src={image}
+          alt="Card Image"
+          className="object-cover w-full h-full"
+        />
       </Link>
       <div className="w-full flex flex-col bg-[#0A0A0A] rounded-b-xl py-4 px-5 gap-[10px]">
-        <h3 className="text-2xl text-[#FFF] font-bold">{title}</h3>
+        <div className="flex justify-between items-center">
+          <h3 className="text-2xl text-[#FFF] font-bold">{title}</h3>
+          <Link to={githubLink!}>
+            <GithubIcon className="size-6 text-gray-400 hover:text-white" />
+          </Link>
+        </div>
         <span className="text-[#ECECEC]">{description}</span>
         <div className="flex gap-2">
           {badges.map((name, index) => (

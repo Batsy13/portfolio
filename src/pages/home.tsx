@@ -63,6 +63,7 @@ export const Home = () => {
                 description="An application that shows you your network traffic"
                 badges={["React", "NodeJs"]}
                 link="https://github.com/lucascosta224fe/Umbra-Front-End"
+                githubLink="https://github.com/lucascosta224fe/Umbra-Front-End"
               />
             </motion.div>
             <motion.div
@@ -76,6 +77,7 @@ export const Home = () => {
                 description="A Hollow Knight Wiki"
                 badges={["React", "NextJs", "Node"]}
                 link="https://github.com/Batsy13/hollow-knight"
+                githubLink="https://github.com/Batsy13/hollow-knight"
               />
             </motion.div>
           </motion.div>
