@@ -48,7 +48,7 @@ export const Sidebar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 900) {
         setCollapse(true);
       }
     };
@@ -63,7 +63,7 @@ export const Sidebar = () => {
 
   return (
     <aside
-      className={`relative hidden sm:block h-full bg-[#0a0a0a] p-4 transition-all duration-300 ease-in-out ${
+      className={`relative hidden sm:block h-screen bg-[#0a0a0a] p-4 transition-all duration-300 ease-in-out ${
         isCollapse ? "w-[84px]" : "w-96"
       }`}
     >

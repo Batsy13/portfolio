@@ -46,14 +46,23 @@ export const AchievementsPage = () => {
             />
           </div>
         </div>
-        {/* <div className="p-4 bg-[#0f0f0f] rounded-2xl">
+        <div className="p-4 bg-[#0f0f0f] rounded-2xl">
           <div className="flex items-center justify-start gap-4 text-white text-[24px] font-semibold">
             <BookOpenIcon size={24} />
             <h2>Education</h2>
           </div>
 
-          <div className="grid"></div>
-        </div> */}
+          <div className="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <AchievementCard
+              image="/iesb-icon.png"
+              imageLink=""
+              title="Computer Science"
+              subtitle="IESB (Undergraduate)"
+              date="Jan. 2023 - Dec. 2026"
+              icon="/iesb-icon.png"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
