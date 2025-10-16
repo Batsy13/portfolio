@@ -65,7 +65,14 @@ It's also recommended to use a code editor like [VSCode](https://code.visualstud
     ```bash
     pnpm install
     ```
-4.  **Run the application in development mode:**
+
+4.  **If you want, you can set the env variables (only for email to work [EmailJS]):**
+    ```bash
+    VITE_EMAIL_SERVICE_ID={your serviceID}
+    VITE_EMAIL_TEMPLATE_ID={your templateID}
+    VITE_EMAIL_PUBLIC_KEY={your public key}
+    ```
+5.  **Run the application in development mode:**
     ```bash
     pnpm run dev
     ```

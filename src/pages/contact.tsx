@@ -9,6 +9,12 @@ export const Contact = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
+  const serviceID = import.meta.env.VITE_EMAIL_SERVICE_ID
+  const templateID = import.meta.env.VITE_EMAIL_TEMPLATE_ID
+  const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY
+
+  console.log(serviceID, templateID, publicKey)
+
   const formSchema = z.object({
     name: z.string().min(1, { message: "Please, enter your name." }),
     subject: z.string().min(1, { message: "Please, enter a subject." }),
@@ -47,10 +53,10 @@ export const Contact = () => {
 
     try {
       await emailjs.send(
-        "service_4anajkr",
-        "template_8qym7ip",
+        serviceID,
+        templateID,
         templateParams,
-        "eT8LhPOvn3z694kkz"
+        publicKey
       );
 
       setIsSuccess(true);
