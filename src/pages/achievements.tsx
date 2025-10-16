@@ -3,7 +3,7 @@ import { BadgeCheckIcon, BookOpenIcon } from "lucide-react";
 
 export const AchievementsPage = () => {
   return (
-    <section className="h-screen w-full bg-[#050505] px-[40px] py-[100px] flex flex-col items-center overflow-y-auto">
+    <section className="h-screen w-full bg-[#050505] px-[40px] pb-[86px] pt-6 sm:pt-[86px] flex flex-col items-center overflow-y-auto">
       <div className="flex flex-col w-full gap-4">
         <div className="p-4 bg-[#0f0f0f] rounded-2xl">
           <div className="flex items-center justify-start gap-4 text-white text-[24px] font-semibold">

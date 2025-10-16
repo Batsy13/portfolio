@@ -74,7 +74,7 @@ export const Card = ({
           </Link>
         </div>
         <span className="text-[#ECECEC]">{description}</span>
-        <div className="flex gap-2">
+        <div className="flex gap-2 overflow-x-auto">
           {badges.map((name, index) => (
             <div
               className="px-3 py-2 bg-[#1F1F1F] w-fit rounded-[5px] text-[#FFF]"

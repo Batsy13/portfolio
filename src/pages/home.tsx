@@ -5,11 +5,11 @@ import { motion } from "motion/react";
 
 export const Home = () => {
   return (
-    <main className="h-screen w-full bg-[#050505] px-[40px] py-[86px] flex flex-col items-center justify-start overflow-y-auto">
+    <main className="h-screen w-full bg-[#050505] px-[40px] pb-[86px] pt-6 sm:pt-[86px] flex flex-col items-center justify-start overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
         <div className="flex flex-col gap-4 py-4 text-[rgb(255,255,255)] w-full">
           <motion.h2
-            className="text-[32px] font-bold"
+            className="text-3xl font-bold"
             initial={{ x: 0, y: -20, opacity: 0 }}
             transition={{ duration: 1 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
@@ -21,7 +21,7 @@ export const Home = () => {
             Developer
           </motion.h2>
           <motion.p
-            className="text-[#c3c3c3]"
+            className="text-[#c3c3c3] text-md"
             initial={{ x: -20, y: 0, opacity: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
@@ -32,7 +32,7 @@ export const Home = () => {
             optimization, UX principles and a SOLID architeture.
           </motion.p>
           <motion.div
-            className="flex gap-3"
+            className="flex flex-col sm:flex-row gap-3"
             initial={{ x: 0, y: 10, opacity: 0 }}
             transition={{ duration: 1, delay: 1 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
@@ -60,7 +60,7 @@ export const Home = () => {
               <Card
                 image="/umbra-preview.png"
                 title="Umbra"
-                description="An application that shows you your network traffic"
+                description="An application that shows your network traffic"
                 badges={["React", "NodeJs"]}
                 link="https://github.com/lucascosta224fe/Umbra-Front-End"
                 githubLink="https://github.com/lucascosta224fe/Umbra-Front-End"

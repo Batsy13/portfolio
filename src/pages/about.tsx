@@ -3,8 +3,8 @@ import { motion } from "motion/react";
 
 export const About = () => {
   return (
-    <section className="flex w-full items-center justify-center bg-[#050505] px-6 md:px-10">
-      <div className="flex w-full max-w-[1000px] flex-col items-center gap-6 py-10 text-center text-[#e0e0e0] md:py-20">
+    <section className="flex w-full items-center justify-center bg-[#050505] px-6 md:px-10 pb-[86px] pt-6 sm:pt-[86px]">
+      <div className="flex w-full max-w-[1000px] flex-col items-center gap-6 text-center text-[#e0e0e0]">
         <motion.img
           src="/me.jpg"
           alt="Profile"
@@ -48,7 +48,7 @@ export const About = () => {
           </motion.div>
         </div>
 
-        <div className="mt-6 gap-4 md:grid xl:grid-cols-2 md:gap-6">
+        <div className="gap-4 md:grid xl:grid-cols-2 md:gap-6">
           <div className="flex flex-col gap-4">
             <motion.h3
               className="text-[20px] font-bold md:text-[24px]"
@@ -111,6 +111,40 @@ export const About = () => {
               jobTitle="Frontend developer (trainee)"
               initialDate="May 2024"
               finalDate="May 2025"
+              text={
+                <ul className="flex flex-col gap-4 font-medium text-justify">
+                  <li className="p-2 bg-[#161616] border border-[#262626] rounded-md hover:bg-[#121212]">
+                    Developed a management platform for Mercado Livre stores in
+                    React, integrating a subscription system with Stripe and an
+                    AI agent for product summaries.
+                  </li>
+                  <li className="p-2 bg-[#161616] border border-[#262626] rounded-md hover:bg-[#121212]">
+                    Created optimized landing pages with a unified login system,
+                    improving user experience and conversion between the product
+                    presentation page and the main platform.
+                  </li>
+                  <li className="p-2 bg-[#161616] border border-[#262626] rounded-md hover:bg-[#121212]">
+                    Implemented an automation system for sending transactional
+                    emails based on the client's subscription status, using
+                    Make.com and Brevo.
+                  </li>
+                  <li className="p-2 bg-[#161616] border border-[#262626] rounded-md hover:bg-[#121212]">
+                    Optimized web application performance, resulting in a 62%
+                    improvement in the Lighthouse score and significantly
+                    reducing loading time.
+                  </li>
+                  <li className="p-2 bg-[#161616] border border-[#262626] rounded-md hover:bg-[#121212]">
+                    Performed maintenance and development of new features in
+                    systems built with Angular, including a platform with
+                    OpenStreetMap integration.
+                  </li>
+                  <li className="p-2 bg-[#161616] border border-[#262626] rounded-md hover:bg-[#121212]">
+                    Structured an event tracking system with Mixpanel/Google
+                    Analytics to analyze user behavior, generating insights that
+                    guided the development of new features and UX improvements.
+                  </li>
+                </ul>
+              }
             />
           </motion.div>
         </div>

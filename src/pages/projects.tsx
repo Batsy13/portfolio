@@ -23,7 +23,7 @@ export const Projects = () => {
             <Card
               image="/umbra-preview.png"
               title="Umbra"
-              description="An application that shows you your network traffic"
+              description="An application that shows your network traffic"
               badges={["React", "NodeJs"]}
               link="https://github.com/lucascosta224fe/Umbra-Front-End"
             />

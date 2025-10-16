@@ -26,7 +26,7 @@ export const EnterpriseCard = ({
           className="size-16 aspect-square rounded-[8px]"
         />
         <div className="flex flex-col text-start w-full">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between">
             <h3 className="text-white font-bold text-xl">{name}</h3>
             <span className="text-[14px]">
               {initialDate} - {finalDate}
@@ -35,7 +35,7 @@ export const EnterpriseCard = ({
           <span className="text-white ">{jobTitle}</span>
         </div>
       </div>
-      <div className="hidden">{text}</div>
+      <div>{text}</div>
     </div>
   );
 };

@@ -1,11 +1,16 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useRef } from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
   const formSchema = z.object({
+    name: z.string().min(1, { message: "Please, enter your name." }),
     subject: z.string().min(1, { message: "Please, enter a subject." }),
     email: z.string().email({ message: "Please, insert a valid email." }),
     message: z
@@ -14,35 +19,54 @@ export const Contact = () => {
       .max(500),
   });
 
-  const form = useForm<z.infer<typeof formSchema>>({
+  const {
+    handleSubmit,
+    register,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      name: "",
       subject: "",
       email: "",
       message: "",
     },
   });
 
-  const {
-    handleSubmit,
-    register,
-    formState: { errors, isSubmitting },
-    reset,
-  } = form;
-
-  const formRef = useRef<HTMLFormElement>(null);
-
   const sendEmail = async (data: z.infer<typeof formSchema>) => {
-    console.log(data);
+    setIsSuccess(false);
+    setErrorMessage("");
+
+    const templateParams = {
+      name: data.name,
+      subject: data.subject,
+      email: data.email,
+      message: data.message,
+    };
+
+    try {
+      await emailjs.send(
+        "service_4anajkr",
+        "template_8qym7ip",
+        templateParams,
+        "eT8LhPOvn3z694kkz"
+      );
+
+      setIsSuccess(true);
+      reset();
+    } catch (error) {
+      console.error("FAILED...", error);
+      setErrorMessage("Failed to send email. Please try again later.");
+    }
   };
 
   return (
-    <section className="h-screen w-full bg-[#050505] px-[40px] py-[86px] flex flex-col items-center justify-center overflow-y-auto">
+    <section className="h-screen w-full bg-[#050505] px-7 sm:px-10 pb-20 pt-6 sm:pt-20 flex flex-col items-center justify-center overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
         <motion.form
-          ref={formRef}
           onSubmit={handleSubmit(sendEmail)}
-          className="p-12 rounded-[20px] w-full bg-[#1F1F1F] flex flex-col gap-4 shadow-[0_0_50px_0px_#FF333340]"
+          className="p-6 sm:p-12 rounded-[20px] w-full bg-[#1F1F1F] flex flex-col gap-4 shadow-[0_0_50px_0px_#FF333340]"
           initial={{ opacity: 0 }}
           transition={{ duration: 1 }}
           animate={{ opacity: 1 }}
@@ -50,6 +74,28 @@ export const Contact = () => {
           <h2 className="text-[24px] font-bold text-[#FFF] mb-4">
             Get in touch
           </h2>
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-[#FFF] text-sm font-bold mb-2"
+            >
+              Name:
+            </label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Your Name"
+              {...register("name")}
+              className={`shadow appearance-none border rounded w-full py-2 px-3 text-[#FFF] leading-tight focus:outline-1 outline-[#7a7a7a] focus:shadow-outline border-[#333] bg-[#333] ${
+                errors.name ? "border-red-500" : ""
+              }`}
+            />
+            {errors.name && (
+              <p className="text-xs italic text-red-500 mt-1">
+                {errors.name.message}
+              </p>
+            )}
+          </div>
           <div>
             <label
               htmlFor="subject"
@@ -67,7 +113,7 @@ export const Contact = () => {
               }`}
             />
             {errors.subject && (
-              <p className="text-xs italic text-red-500">
+              <p className="text-xs italic text-red-500 mt-1">
                 {errors.subject.message}
               </p>
             )}
@@ -90,13 +136,13 @@ export const Contact = () => {
               }`}
             />
             {errors.email && (
-              <p className="text-xs italic text-red-500">
+              <p className="text-xs italic text-red-500 mt-1">
                 {errors.email?.message}
               </p>
             )}
           </div>
 
-          <div className="">
+          <div>
             <label
               htmlFor="message"
               className="text-[#FFF] text-sm font-bold mb-2"
@@ -108,20 +154,31 @@ export const Contact = () => {
               maxLength={500}
               placeholder="Enter your message"
               {...register("message")}
-              className={`shadow appearance-none border rounded w-full h-full py-2 px-3 text-[#FFF] leading-tight focus:outline-1 outline-[#7a7a7a] focus:shadow-outline border-[#333] bg-[#333] resize-none ${
+              className={`shadow appearance-none border rounded w-full h-24 py-2 px-3 text-[#FFF] leading-tight focus:outline-1 outline-[#7a7a7a] focus:shadow-outline border-[#333] bg-[#333] resize-none ${
                 errors.message ? "border-red-500" : ""
               }`}
             />
             {errors.message && (
-              <p className="text-xs italic text-red-500">
+              <p className="text-xs italic text-red-500 mt-1">
                 {errors.message?.message}
               </p>
             )}
           </div>
 
+          {isSuccess && (
+            <p className="text-green-500 text-sm font-bold text-center">
+              Email sent successfully!
+            </p>
+          )}
+          {errorMessage && (
+            <p className="text-red-500 text-sm font-bold text-center">
+              {errorMessage}
+            </p>
+          )}
+
           <button
             type="submit"
-            className="bg-red-500 hover:bg-red-950 text-white font-bold py-2 px-4 rounded focus:outline-1 outline-[#7a7a7a] focus:shadow-outline disabled:opacity-50 mt-12 cursor-pointer"
+            className="bg-red-500 hover:bg-red-950 text-white font-bold py-2 px-4 rounded focus:outline-1 outline-[#7a7a7a] focus:shadow-outline disabled:opacity-50 mt-8 cursor-pointer transition-colors duration-300"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Sending..." : "Send Email"}
