@@ -38,7 +38,6 @@ export const AchievementsPage = () => {
             />
             <AchievementCard
               image="../src/assets/certificates/data-structure.png"
-              imageLink=""
               title="Data Structure"
               subtitle="Augusto Galego ( Hubla )"
               date="Issued July 2025"
@@ -55,7 +54,6 @@ export const AchievementsPage = () => {
           <div className="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             <AchievementCard
               image="/iesb-icon.png"
-              imageLink=""
               title="Computer Science"
               subtitle="IESB (Undergraduate)"
               date="Jan. 2023 - Dec. 2026"

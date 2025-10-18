@@ -66,7 +66,7 @@ export const Card = ({
           className="object-cover w-full h-full"
         />
       </Link>
-      <div className="w-full flex flex-col bg-[#0A0A0A] rounded-b-xl py-4 px-5 gap-[10px]">
+      <div className="w-full flex flex-col bg-[#0A0A0A] rounded-b-xl py-4 px-5 gap-[10px] grow">
         <div className="flex justify-between items-center">
           <h3 className="text-2xl text-[#FFF] font-bold">{title}</h3>
           <Link to={githubLink!}>

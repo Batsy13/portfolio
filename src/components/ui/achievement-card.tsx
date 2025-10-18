@@ -3,7 +3,7 @@ import { useState } from "react";
 
 type AchievementCardProps = {
   image: string;
-  imageLink: string;
+  imageLink?: string;
   title: string;
   subtitle: string;
   date: string;
@@ -32,7 +32,7 @@ export const AchievementCard = ({
           className="rounded-[14px] object-cover w-full h-full transition-opacity duration-300 aspect-[16/12]"
           alt={title}
         />
-        {isHovered && (
+        {isHovered && imageLink && (
           <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-b from-gray-600/10 to-black/70 rounded-[14px] transition-opacity duration-1000 ease-in-out opacity-100">
             <div className="flex justify-start p-4">
               <a

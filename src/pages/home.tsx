@@ -73,7 +73,7 @@ export const Home = () => {
             >
               <Card
                 image="/hollow hero.png"
-                title="Hollow Knight"
+                title="Hollow Knight (Under Development)"
                 description="A Hollow Knight Wiki"
                 badges={["React", "NextJs", "Node"]}
                 link="https://github.com/Batsy13/hollow-knight"

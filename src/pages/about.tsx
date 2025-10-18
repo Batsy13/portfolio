@@ -48,7 +48,7 @@ export const About = () => {
           </motion.div>
         </div>
 
-        <div className="gap-4 md:grid xl:grid-cols-2 md:gap-6">
+        <div className="gap-4 md:grid md:gap-6">
           <div className="flex flex-col gap-4">
             <motion.h3
               className="text-[20px] font-bold md:text-[24px]"
@@ -87,8 +87,6 @@ export const About = () => {
               solutions.
             </motion.span>
           </div>
-
-          <div></div>
         </div>
         <div className="flex w-full flex-col gap-4 md:gap-6">
           <motion.h3
@@ -114,12 +112,12 @@ export const About = () => {
               text={
                 <ul className="flex flex-col gap-4 font-medium text-justify">
                   <li className="p-2 bg-[#161616] border border-[#262626] rounded-md hover:bg-[#121212]">
-                    Developed a management platform for Mercado Livre stores in
+                    Developed a management platform for "Mercado Libre" stores in
                     React, integrating a subscription system with Stripe and an
                     AI agent for product summaries.
                   </li>
                   <li className="p-2 bg-[#161616] border border-[#262626] rounded-md hover:bg-[#121212]">
-                    Created optimized landing pages with a unified login system,
+                    Created optimized landing pages with a unified login system with the main application,
                     improving user experience and conversion between the product
                     presentation page and the main platform.
                   </li>
@@ -143,6 +141,7 @@ export const About = () => {
                     Analytics to analyze user behavior, generating insights that
                     guided the development of new features and UX improvements.
                   </li>
+                  <span><strong>Tags:</strong> React, NextJs, Angular, SCSS, TailwindCSS, ShadcnUI, Zustand, Stripe, Brevo, Make.com</span>
                 </ul>
               }
             />

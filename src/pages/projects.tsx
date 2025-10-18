@@ -15,7 +15,7 @@ export const Projects = () => {
             Projects
           </motion.h2>
           <motion.div
-            className="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-2 gap-[24px]"
+            className="grid grid-cols-1 grid-rows-1 md:grid-cols-2 lg:grid-rows-2 gap-[24px]"
             initial={{ x: 0, y: -10, opacity: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
@@ -29,23 +29,19 @@ export const Projects = () => {
             />
             <Card
               image="/hollow hero.png"
-              title="Hollow Knight"
+              title="Hollow Knight (Under Development)"
               description="A Hollow Knight Wiki"
               badges={["React", "NextJs", "Node"]}
               link="https://github.com/Batsy13/hollow-knight"
               githubLink="https://github.com/Batsy13/hollow-knight"
             />
             <Card
-              title="Bat-lib"
-              description="A component library for react"
+              image="/batlib.png"
+              title="Bat-lib (Under Development)"
+              description="A React component library built as a personal study project."
               badges={["React"]}
               link="https://github.com/Batsy13/bat-ui"
               githubLink="https://github.com/Batsy13/bat-ui"
-            />
-            <Card
-              title="Notes"
-              description="lorem ipsum dolor it amet"
-              badges={["React", "Node", "NextJs"]}
             />
           </motion.div>
         </div>
