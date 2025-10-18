@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export const Home = () => {
   return (
-    <main className="h-screen w-full bg-[#050505] px-[40px] pb-[86px] pt-6 sm:pt-[86px] flex flex-col items-center justify-start overflow-y-auto">
+    <main className="h-dvh w-full bg-[#050505] px-[40px] pb-[86px] pt-6 sm:pt-[86px] flex flex-col items-center justify-start overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
         <div className="flex flex-col gap-4 py-4 text-[rgb(255,255,255)] w-full">
           <motion.h2
