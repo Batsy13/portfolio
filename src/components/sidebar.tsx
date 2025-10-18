@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 import { AnimatedShinyText } from "./magicui/animated-shiny-text";
 import { cn } from "@/lib/utils";
-import Github from "@/assets/aside/github.svg";
-import Linkedin from "@/assets/aside/linkedin.svg";
+import Github from "/aside/github.svg";
+import Linkedin from "/aside/linkedin.svg";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
 import { MenuMobile } from "./menu-mobile";

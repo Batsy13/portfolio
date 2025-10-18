@@ -26,22 +26,22 @@ export const Stack = () => {
           </AnimatedShinyText>
           <div className="grid grid-cols-1 grid-rows-1 gap-4 lg:grid-cols-2 lg:grid-rows-2">
             <TechnologiesCard
-              icon="/src/assets/stack/react.svg"
+              icon="/stack/react.svg"
               title="React"
               description="A JavaScript library for building user interfaces or UI components. It enables the creation of dynamic and interactive web applications."
             />
             <TechnologiesCard
-              icon="/src/assets/stack/nextjs.svg"
+              icon="/stack/nextjs.svg"
               title="NextJS"
               description="An open-source React framework that enables server-side rendering and the creation of full-stack web applications. It simplifies routing, data fetching, and deployment."
             />
             <TechnologiesCard
-              icon="/src/assets/stack/angular.svg"
+              icon="/stack/angular.svg"
               title="Angular"
               description="A comprehensive platform and framework for building single-page client applications using HTML and TypeScript. It provides a structured approach."
             />
             <TechnologiesCard
-              icon="/src/assets/stack/tailwind.svg"
+              icon="/stack/tailwind.svg"
               title="Tailwind CSS"
               description="A utility-first CSS framework that provides low-level utility classes. This allows for rapid and highly customized UI development."
             />
@@ -57,27 +57,27 @@ export const Stack = () => {
           <AnimatedShinyText className="text-[24px] font-bold">
             Backend Development
           </AnimatedShinyText>
-          <div className="grid grid-cols-1 grid-rows-1 gap-4 lg:grid-cols-2 lg:grid-rows-2">
+          <div className="grid grid-cols-1 grid-rows-1 gap-4 lg:grid-cols-2">
             <TechnologiesCard
-              icon="/src/assets/stack/nodejs.svg"
+              icon="/stack/nodejs.svg"
               title="Node"
               description="A JavaScript runtime environment for server-side execution. It's known for its efficiency in building scalable network applications."
             />
             <TechnologiesCard
-              icon="/src/assets/stack/express.svg"
+              icon="/stack/express.svg"
               title="Express"
               description="A lightweight and flexible web application framework for Node.js. It simplifies the development of APIs and web applications."
             />
-            <TechnologiesCard
-              icon="/src/assets/stack/python.svg"
+            {/* <TechnologiesCard
+              icon="/stack/python.svg"
               title="Python"
               description="A versatile and readable programming language widely used in web development, data science, automation, and more."
             />
             <TechnologiesCard
-              icon="/src/assets/stack/django.svg"
+              icon="/stack/django.svg"
               title="Django"
               description="A high-level Python web framework that facilitates rapid development of robust and feature-rich web applications."
-            />
+            /> */}
           </div>
         </motion.div>
 
@@ -92,7 +92,7 @@ export const Stack = () => {
           </AnimatedShinyText>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             <TechnologiesCard
-              icon="/src/assets/stack/figma.svg"
+              icon="/stack/figma.svg"
               title="Figma"
               description="A collaborative, web-based design tool for creating user interfaces and interactive prototypes. It facilitates real-time teamwork and streamlines the design process for digital products."
             />
