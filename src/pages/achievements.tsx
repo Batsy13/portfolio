@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export const AchievementsPage = () => {
   return (
-    <section className="h-dvh w-full bg-[#050505] px-[40px] pb-[86px] pt-6 sm:pt-[86px] flex flex-col items-center overflow-y-auto">
+    <section className="h-svh w-full bg-[#050505] px-[40px] pb-[86px] pt-6 sm:pt-[86px] flex flex-col items-center overflow-y-auto">
       <div className="flex flex-col w-full gap-4">
         <motion.div
           className="p-4 bg-[#0f0f0f] rounded-2xl"

@@ -3,7 +3,7 @@ import { Sidebar } from "./components/sidebar";
 
 function Layout() {
   return (
-    <div className="h-[100dvh] flex montserrat">
+    <div className="h-svh flex montserrat">
       <Sidebar />
       <main className="w-full overflow-y-scroll">
         <Outlet />

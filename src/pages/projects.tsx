@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export const Projects = () => {
   return (
-    <section className="h-dvh w-full bg-[#050505] px-[40px] py-[100px] flex flex-col items-center justify-start overflow-y-auto">
+    <section className="h-svh w-full bg-[#050505] px-[40px] py-[100px] flex flex-col items-center justify-start overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
         <div className="flex flex-col w-full gap-4">
           <motion.h2
@@ -42,6 +42,14 @@ export const Projects = () => {
               badges={["React"]}
               link="https://github.com/Batsy13/bat-ui"
               githubLink="https://github.com/Batsy13/bat-ui"
+            />
+            <Card
+              image="/deputy neo4j.png"
+              title="Parliamentary Activity Tracker"
+              description="Tracking Parliamentary Activity in the Chamber of Deputies"
+              badges={["Neo4j", "Python"]}
+              link="https://github.com/Batsy13/graph-theory-pi"
+              githubLink="https://github.com/Batsy13/graph-theory-pi"
             />
           </motion.div>
         </div>

@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export const Stack = () => {
   return (
-    <section className="h-dvh w-full bg-[#050505] px-[40px] py-[100px] flex flex-col items-center justify-start overflow-y-auto">
+    <section className="h-svh w-full bg-[#050505] px-[40px] py-[100px] flex flex-col items-center justify-start overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
         <motion.h2
           className="text-[#FFF] text-[32px] font-bold"

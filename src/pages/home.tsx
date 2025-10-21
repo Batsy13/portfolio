@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export const Home = () => {
   return (
-    <main className="h-dvh w-full bg-[#050505] px-[40px] pb-[86px] pt-6 sm:pt-[86px] flex flex-col items-center justify-start overflow-y-auto">
+    <main className="h-svh w-full bg-[#050505] px-[40px] pb-[86px] pt-6 sm:pt-[86px] flex flex-col items-center justify-start overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
         <div className="flex flex-col gap-4 py-4 text-[rgb(255,255,255)] w-full">
           <motion.h2
@@ -72,12 +72,12 @@ export const Home = () => {
               animate={{ opacity: 1 }}
             >
               <Card
-                image="/hollow hero.png"
-                title="Hollow Knight (Under Development)"
-                description="A Hollow Knight Wiki"
-                badges={["React", "NextJs", "Node"]}
-                link="https://github.com/Batsy13/hollow-knight"
-                githubLink="https://github.com/Batsy13/hollow-knight"
+                image="/batlib.png"
+                title="Bat-lib (Under Development)"
+                description="A React component library built as a personal study project."
+                badges={["React"]}
+                link="https://github.com/Batsy13/bat-ui"
+                githubLink="https://github.com/Batsy13/bat-ui"
               />
             </motion.div>
           </motion.div>

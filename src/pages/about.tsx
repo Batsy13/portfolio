@@ -112,14 +112,20 @@ export const About = () => {
               text={
                 <ul className="flex flex-col gap-4 font-medium text-justify">
                   <li className="p-2 bg-[#161616] border border-[#262626] rounded-md hover:bg-[#121212]">
-                    Developed a management platform for "Mercado Libre" stores in
-                    React, integrating a subscription system with Stripe and an
-                    AI agent for product summaries.
+                    Developed a management platform for "Mercado Libre" stores
+                    in React, integrating a subscription system with Stripe and
+                    an AI agent for product summaries.
                   </li>
                   <li className="p-2 bg-[#161616] border border-[#262626] rounded-md hover:bg-[#121212]">
-                    Created optimized landing pages with a unified login system with the main application,
-                    improving user experience and conversion between the product
-                    presentation page and the main platform.
+                    Created optimized landing pages with a unified login system
+                    with the main application, improving user experience and
+                    conversion between the product presentation page and the
+                    main platform.
+                  </li>
+                  <li className="p-2 bg-[#161616] border border-[#262626] rounded-md hover:bg-[#121212]">
+                    Implemented an end-to-end automated test suite with
+                    Playwright, covering critical user flows and ensuring the
+                    reliability of new features before deployment.
                   </li>
                   <li className="p-2 bg-[#161616] border border-[#262626] rounded-md hover:bg-[#121212]">
                     Implemented an automation system for sending transactional
@@ -141,7 +147,11 @@ export const About = () => {
                     Analytics to analyze user behavior, generating insights that
                     guided the development of new features and UX improvements.
                   </li>
-                  <span><strong>Tags:</strong> React, NextJs, Angular, SCSS, TailwindCSS, ShadcnUI, Zustand, Stripe, Brevo, Make.com</span>
+                  <span>
+                    <strong>Tags:</strong> React, NextJs, Angular, SCSS,
+                    TailwindCSS, ShadcnUI, Zustand, Playwright, TanStack Query,
+                    Stripe, Brevo, Make.com
+                  </span>
                 </ul>
               }
             />

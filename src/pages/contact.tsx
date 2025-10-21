@@ -68,7 +68,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className="h-dvh w-full bg-[#050505] px-7 sm:px-10 pb-20 pt-6 sm:pt-20 flex flex-col items-center justify-center overflow-y-auto">
+    <section className="h-svh w-full bg-[#050505] px-7 sm:px-10 pb-20 pt-6 sm:pt-20 flex flex-col items-center justify-center overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
         <motion.form
           onSubmit={handleSubmit(sendEmail)}
