@@ -51,6 +51,14 @@ export const Projects = () => {
               link="https://github.com/Batsy13/graph-theory-pi"
               githubLink="https://github.com/Batsy13/graph-theory-pi"
             />
+            <Card
+              image="/kana-training.png"
+              title="Kana Training"
+              description="A React-based Japanese Kana (Hiragana/Katakana) quiz app with a spaced repetition system. "
+              badges={["React"]}
+              link="https://kana-training.vercel.app"
+              githubLink="https://github.com/Batsy13/kana-training"
+            />
           </motion.div>
         </div>
       </div>

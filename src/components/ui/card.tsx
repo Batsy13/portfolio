@@ -69,7 +69,7 @@ export const Card = ({
       <div className="w-full flex flex-col bg-[#0A0A0A] rounded-b-xl py-4 px-5 gap-[10px] grow">
         <div className="flex justify-between items-center">
           <h3 className="text-2xl text-[#FFF] font-bold">{title}</h3>
-          <Link to={githubLink!}>
+          <Link to={githubLink!} target="_blank">
             <GithubIcon className="size-6 text-gray-400 hover:text-white" />
           </Link>
         </div>
