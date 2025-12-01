@@ -1,14 +1,11 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
 import { motion } from "motion/react";
 import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 export const Contact = () => {
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-
   const serviceID = import.meta.env.VITE_EMAIL_SERVICE_ID
   const templateID = import.meta.env.VITE_EMAIL_TEMPLATE_ID
   const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY
@@ -41,9 +38,6 @@ export const Contact = () => {
   });
 
   const sendEmail = async (data: z.infer<typeof formSchema>) => {
-    setIsSuccess(false);
-    setErrorMessage("");
-
     const templateParams = {
       name: data.name,
       subject: data.subject,
@@ -59,11 +53,11 @@ export const Contact = () => {
         publicKey
       );
 
-      setIsSuccess(true);
+      toast.success("Email sent successfully!");
       reset();
     } catch (error) {
       console.error("FAILED...", error);
-      setErrorMessage("Failed to send email. Please try again later.");
+      toast.error("Failed to send email. Please try again later.");
     }
   };
 
@@ -92,9 +86,8 @@ export const Contact = () => {
               id="name"
               placeholder="Your Name"
               {...register("name")}
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-[#FFF] leading-tight focus:outline-1 outline-[#7a7a7a] focus:shadow-outline border-[#333] bg-[#333] ${
-                errors.name ? "border-red-500" : ""
-              }`}
+              className={`shadow appearance-none border rounded w-full py-2 px-3 text-[#FFF] leading-tight focus:outline-1 outline-[#7a7a7a] focus:shadow-outline border-[#333] bg-[#333] ${errors.name ? "border-red-500" : ""
+                }`}
             />
             {errors.name && (
               <p className="text-xs italic text-red-500 mt-1">
@@ -114,9 +107,8 @@ export const Contact = () => {
               id="subject"
               placeholder="We need to talk"
               {...register("subject")}
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-[#FFF] leading-tight focus:outline-1 outline-[#7a7a7a] focus:shadow-outline border-[#333] bg-[#333] ${
-                errors.subject ? "border-red-500" : ""
-              }`}
+              className={`shadow appearance-none border rounded w-full py-2 px-3 text-[#FFF] leading-tight focus:outline-1 outline-[#7a7a7a] focus:shadow-outline border-[#333] bg-[#333] ${errors.subject ? "border-red-500" : ""
+                }`}
             />
             {errors.subject && (
               <p className="text-xs italic text-red-500 mt-1">
@@ -137,9 +129,8 @@ export const Contact = () => {
               id="email"
               placeholder="email@email.com"
               {...register("email")}
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-[#FFF] leading-tight focus:outline-1 outline-[#7a7a7a] focus:shadow-outline border-[#333] bg-[#333] ${
-                errors.email ? "border-red-500" : ""
-              }`}
+              className={`shadow appearance-none border rounded w-full py-2 px-3 text-[#FFF] leading-tight focus:outline-1 outline-[#7a7a7a] focus:shadow-outline border-[#333] bg-[#333] ${errors.email ? "border-red-500" : ""
+                }`}
             />
             {errors.email && (
               <p className="text-xs italic text-red-500 mt-1">
@@ -160,9 +151,8 @@ export const Contact = () => {
               maxLength={500}
               placeholder="Enter your message"
               {...register("message")}
-              className={`shadow appearance-none border rounded w-full h-24 py-2 px-3 text-[#FFF] leading-tight focus:outline-1 outline-[#7a7a7a] focus:shadow-outline border-[#333] bg-[#333] resize-none ${
-                errors.message ? "border-red-500" : ""
-              }`}
+              className={`shadow appearance-none border rounded w-full h-24 py-2 px-3 text-[#FFF] leading-tight focus:outline-1 outline-[#7a7a7a] focus:shadow-outline border-[#333] bg-[#333] resize-none ${errors.message ? "border-red-500" : ""
+                }`}
             />
             {errors.message && (
               <p className="text-xs italic text-red-500 mt-1">
@@ -170,17 +160,6 @@ export const Contact = () => {
               </p>
             )}
           </div>
-
-          {isSuccess && (
-            <p className="text-green-500 text-sm font-bold text-center">
-              Email sent successfully!
-            </p>
-          )}
-          {errorMessage && (
-            <p className="text-red-500 text-sm font-bold text-center">
-              {errorMessage}
-            </p>
-          )}
 
           <button
             type="submit"
