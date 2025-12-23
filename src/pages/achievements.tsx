@@ -49,6 +49,14 @@ export const AchievementsPage = () => {
               date="Issued July 2025"
               icon="/hubla icon.jpeg"
             />
+            <AchievementCard
+              image="/certificates/js-course-english.jpg"
+              imageLink="https://www.udemy.com/certificate/UC-22e43a6f-70a3-46ad-8cfd-299fe2bddb71/"
+              title="Advanced JavaScript and TypeScript"
+              subtitle="Luiz Otávio ( Udemy )"
+              date="Issued Dec. 2025"
+              icon="/udemy-icon.png"
+            />
           </div>
         </motion.div>
         <motion.div
