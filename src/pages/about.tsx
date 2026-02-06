@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export const About = () => {
   return (
-    <section className="flex w-full items-center justify-center bg-[#050505] px-6 md:px-10 pb-[86px] pt-6 sm:pt-[86px]">
+    <section className="flex w-full items-center justify-center bg-[#050505] px-4 sm:px-10 pb-[86px] pt-6 sm:pt-[86px]">
       <div className="flex w-full max-w-[1000px] flex-col items-center gap-6 text-center text-[#e0e0e0]">
         <motion.img
           src="/me.jpg"
@@ -32,7 +32,7 @@ export const About = () => {
           >
             Hi, I'm <strong>Pedro</strong>, a passionate brazilian{" "}
             <span className="font-medium text-[#FF3333]">
-              Frontend Developer
+              Web Developer
             </span>{" "}
             dedicated to crafting engaging and intuitive digital experiences. I
             am currently pursuing a{" "}

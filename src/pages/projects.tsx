@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export const Projects = () => {
   return (
-    <section className="h-svh w-full bg-[#050505] px-[40px] py-[100px] flex flex-col items-center justify-start overflow-y-auto">
+    <section className="h-svh w-full bg-[#050505] px-4 sm:px-10 py-[100px] flex flex-col items-center justify-start overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
         <div className="flex flex-col w-full gap-4">
           <motion.h2
@@ -28,20 +28,20 @@ export const Projects = () => {
               link="https://github.com/lucascosta224fe/Umbra-Front-End"
             />
             <Card
-              image="/hollow hero.png"
-              title="Hollow Knight (Under Development)"
-              description="A Hollow Knight Wiki"
-              badges={["React", "NextJs", "Node"]}
-              link="https://github.com/Batsy13/hollow-knight"
-              githubLink="https://github.com/Batsy13/hollow-knight"
-            />
-            <Card
               image="/batlib.png"
-              title="Bat-lib (Under Development)"
+              title="Bat-ui"
               description="A React component library built as a personal study project."
               badges={["React"]}
               link="https://github.com/Batsy13/bat-ui"
               githubLink="https://github.com/Batsy13/bat-ui"
+            />
+            <Card
+              image="/kana-training.png"
+              title="Kana Training"
+              description="A React-based Japanese Kana (Hiragana/Katakana) quiz app with a spaced repetition system. "
+              badges={["React"]}
+              link="https://kana-training.vercel.app"
+              githubLink="https://github.com/Batsy13/kana-training"
             />
             <Card
               image="/deputy neo4j.png"
@@ -52,12 +52,12 @@ export const Projects = () => {
               githubLink="https://github.com/Batsy13/graph-theory-pi"
             />
             <Card
-              image="/kana-training.png"
-              title="Kana Training"
-              description="A React-based Japanese Kana (Hiragana/Katakana) quiz app with a spaced repetition system. "
-              badges={["React"]}
-              link="https://kana-training.vercel.app"
-              githubLink="https://github.com/Batsy13/kana-training"
+              image="/hollow hero.png"
+              title="Hollow Knight (Under Development)"
+              description="A Hollow Knight Wiki"
+              badges={["React", "NextJs", "Node"]}
+              link="https://github.com/Batsy13/hollow-knight"
+              githubLink="https://github.com/Batsy13/hollow-knight"
             />
           </motion.div>
         </div>

@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export const Home = () => {
   return (
-    <main className="h-svh w-full bg-[#050505] px-[40px] pb-[86px] pt-6 sm:pt-[86px] flex flex-col items-center justify-start overflow-y-auto">
+    <main className="h-svh w-full bg-[#050505] px-4 sm:px-10 pb-[86px] pt-6 sm:pt-[86px] flex flex-col items-center justify-start overflow-y-auto">
       <div className="flex flex-col gap-4 max-w-[1000px] w-full">
         <div className="flex flex-col gap-4 py-4 text-[rgb(255,255,255)] w-full">
           <motion.h2
@@ -16,17 +16,17 @@ export const Home = () => {
           >
             Hey, I'm Pedro. <br /> A{" "}
             <AuroraText colors={["#FF4D4D", "#FF3333", "#FF1A1A", "#FF0000"]}>
-              Frontend
-            </AuroraText>{" "}
-            Developer
+              Web
+              Developer
+            </AuroraText>
           </motion.h2>
           <motion.p
-            className="text-[#c3c3c3] text-md"
+            className="text-[#c3c3c3] text-sm md:text-md"
             initial={{ x: -20, y: 0, opacity: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
           >
-            I am a front-end web developer dedicated to building visually
+            I am a web developer dedicated to building visually
             appealing and functionally robust websites. My skills encompass
             responsive design, cross-browser compatibility, performance
             optimization, UX principles and a SOLID architeture.
@@ -38,8 +38,10 @@ export const Home = () => {
             animate={{ x: 0, y: 0, opacity: 1 }}
           >
             <TechnologiesButton>React</TechnologiesButton>
-            <TechnologiesButton>Node</TechnologiesButton>
             <TechnologiesButton>NextJS</TechnologiesButton>
+            <TechnologiesButton>Angular</TechnologiesButton>
+            <TechnologiesButton>NodeJs</TechnologiesButton>
+            <TechnologiesButton>NestJs</TechnologiesButton>
           </motion.div>
         </div>
         <div className="flex flex-col w-full gap-4">

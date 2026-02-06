@@ -81,7 +81,7 @@ export const Sidebar = () => {
           />
           <div className={cn(isCollapse ? "hidden" : "")}>
             <p className="font-bold text-[#FFF] text-[20px]">Pedro Costa</p>
-            <AnimatedShinyText>Dev Frontend</AnimatedShinyText>
+            <AnimatedShinyText>Web Developer</AnimatedShinyText>
           </div>
         </div>
 
